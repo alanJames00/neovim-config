@@ -19,3 +19,10 @@ end
 dofile(vim.g.base46_cache .. "defaults")
 vim.opt.rtp:prepend(lazypath)
 require "plugins"
+
+-- custom vim rc setup
+vim.cmd([[
+  set noexpandtab
+  set tabstop=4
+  set shiftwidth=4
+]])
