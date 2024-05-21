@@ -15,5 +15,15 @@ M.dap = {
   }
 }
 
+-- stores all the custom keymappings
+M.custom = {
+  plugin = false,
+  n = {
+    ["<leader>tt"] = {
+      "<cmd> terminal <CR>",
+      "Open Terminal in a new Tab"
+    }
+  }
+}
 
 return M
