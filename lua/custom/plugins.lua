@@ -46,6 +46,7 @@ local plugins = {
         "prettier",
         "js-debug-adapter",
         "typescript-language-server",
+		"gopls"
       }
     }
   },
