@@ -32,3 +32,11 @@ lspconfig.gopls.setup {
 		}
 	}
 }
+
+lspconfig.clangd.setup {
+	on_attach = on_attach,
+	capabilities = capabilities,
+	cmd = { "clangd", "--background-index" },
+	filetypes = { "c", "cpp", "objc", "objcpp" },
+	root_dir = util.root_pattern("compile_commands.json", ".git"),
+}
