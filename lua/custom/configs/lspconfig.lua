@@ -40,3 +40,20 @@ lspconfig.clangd.setup {
 	filetypes = { "c", "cpp", "objc", "objcpp" },
 	root_dir = util.root_pattern("compile_commands.json", ".git"),
 }
+
+-- Python Language Server (Pyright)
+lspconfig.pyright.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "python" },
+    root_dir = util.root_pattern(".git", "pyproject.toml", "setup.py", "setup.cfg", "requirements.txt"),
+    settings = {
+        python = {
+            analysis = {
+                typeCheckingMode = "basic", -- Options: "off", "basic", "strict"
+                autoSearchPaths = true,
+                useLibraryCodeForTypes = true,
+            }
+        }
+    }
+}
